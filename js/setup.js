@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 var userDialog = document.querySelector('.setup');
 userDialog.classList.remove('hidden');
 
@@ -10,7 +10,7 @@ var WIZARD_COAT = ['rgb(101, 137, 164)', 'rgb(241, 43, 107)', 'rgb(146, 100, 161
 var WIZARD_EYES = ['black', 'red', 'blue', 'yellow', 'green'];
 
 var getRandom = function (arr) {
-  return arr[Math.floor(Math.random() * arr.length)]
+  return arr[Math.floor(Math.random() * arr.length)];
 };
 
 var wizards = [];
@@ -19,8 +19,8 @@ for (var i = 0; i < 4; i++) {
     name: getRandom(WIZARD_NAMES) + ' ' + getRandom(WIZARD_SURNAMES),
     coatColor: getRandom(WIZARD_COAT),
     eyesColor: getRandom(WIZARD_EYES)
-  }
-};
+  };
+}
 
 var similarListElement = document.querySelector('.setup-similar-list');
 var similarWizardTemplate = document.querySelector('#similar-wizard-template')
@@ -35,10 +35,10 @@ var renderWizard = function (wizard) {
   wizardElement.querySelector('.wizard-eyes').style.fill = wizard.eyesColor;
 
   return wizardElement;
-}
+};
 
 var fragment = document.createDocumentFragment();
-for (var i = 0; i < wizards.length; i++) {
+for (i = 0; i < wizards.length; i++) {
   fragment.appendChild(renderWizard(wizards[i]));
 }
 similarListElement.appendChild(fragment);
