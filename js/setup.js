@@ -28,7 +28,7 @@ var getMoreWizards = function (arr) {
       eyesColor: getRandom(wizardEyes)
     };
   }
-  return(arr);
+  return arr;
 };
 
 getMoreWizards(wizards);
@@ -48,8 +48,7 @@ var createWizards = function (arr) {
     fragment.appendChild(renderWizard(arr[i]));
   }
   similarListElement.appendChild(fragment);
-}
-
+};
 createWizards (wizards);
 
 userDialog.querySelector('.setup-similar').classList.remove('hidden');
