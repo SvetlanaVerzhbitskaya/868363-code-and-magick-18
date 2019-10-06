@@ -49,6 +49,6 @@ var createWizards = function (arr) {
   }
   similarListElement.appendChild(fragment);
 };
-createWizards (wizards);
+createWizards(wizards);
 
 userDialog.querySelector('.setup-similar').classList.remove('hidden');
